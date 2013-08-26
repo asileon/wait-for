@@ -69,7 +69,7 @@
   "stuff to do when an iteration fails. Returns new options"
   [options]
   (when (-> options :sleep)
-    (Thread/sleep (-> options :sleep period->millis)))
+    (Thread/sleep (.getMillis (.toStandardDuration (:sleep options)))))
   (update-in options [:tries] (fn [tries]
                                 (if (integer? tries)
                                   (dec tries)
