@@ -1,4 +1,4 @@
-(defproject circle/wait-for "1.0.0"
+(defproject asileon/wait-for "1.0.0"
   :description "a HOF for specifying retries"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [clj-time "0.4.4"]
